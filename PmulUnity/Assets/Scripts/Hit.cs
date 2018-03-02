@@ -28,6 +28,7 @@ public class Hit : MonoBehaviour
     //¿Está en combate?
     private bool combat = false;
 
+    //¿Puede atacar a la torre?
     private bool attackTower = false;
 
 
@@ -70,11 +71,14 @@ public class Hit : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals(enemigo))
         {
-            movement = false;
-            combat = true;
-            animator.Play("Attack");
-            estadisticasRival = collision.gameObject.GetComponent<Stats>();
-            enemy = collision.gameObject.GetComponent<Hit>();
+            if (!combat)
+            {
+                movement = false;
+                combat = true;
+                animator.Play("Attack");
+                estadisticasRival = collision.gameObject.GetComponent<Stats>();
+                enemy = collision.gameObject.GetComponent<Hit>();
+            }
         }
         else if (collision.gameObject.tag.Equals(compañero))
         {

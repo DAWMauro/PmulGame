@@ -223,7 +223,6 @@
     <Compile Include="Assets\AllySpawn.cs" />
     <Compile Include="Assets\Black_Knight_Spawn.cs" />
     <Compile Include="Assets\Scripts\Hit.cs" />
-    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Stats.cs" />
     <Compile Include="Assets\SpawnEnemys.cs" />
     <Compile Include="Assets\TowerHit.cs" />

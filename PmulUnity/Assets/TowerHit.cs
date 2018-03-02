@@ -15,7 +15,6 @@ public class TowerHit : MonoBehaviour {
     {
         if (collision.gameObject.tag.Equals("Ally"))
         {
-            Debug.Log("COLISIIIOOOOON");
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.collider);
         }
     }
