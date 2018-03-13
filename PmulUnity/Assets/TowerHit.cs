@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TowerHit : MonoBehaviour {
 
-    private Stats estadisticasPropia;
+    //private Stats estadisticasPropia;
     private Stats estadisticasRival;
 
     void Start () {
-        estadisticasPropia = GetComponent<Stats>();
+        //estadisticasPropia = GetComponent<Stats>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

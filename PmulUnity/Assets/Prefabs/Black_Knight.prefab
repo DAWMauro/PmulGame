@@ -133,6 +133,7 @@ MonoBehaviour:
   damage: 15
   health: 40
   speed: 0.7
+  cost: 30
 --- !u!212 &212347296518177392
 SpriteRenderer:
   m_ObjectHideFlags: 1

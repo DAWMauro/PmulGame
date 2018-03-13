@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-
     [SerializeField]
     private int damage = 0;
     [SerializeField]
     private int health = 0;
     [SerializeField]
     private float speed = 0.2f;
+    [SerializeField]
+    private int cost = 0;
+    [SerializeField]
+    private int reward = 0;
 
 
 
@@ -53,5 +56,23 @@ public class Stats : MonoBehaviour
         {
             speed = value;
         }
+    }
+
+    public int Cost
+    {
+        get
+        {
+            return cost;
+        }
+
+    }
+
+    public int Reward
+    {
+        get
+        {
+            return reward;
+        }
+
     }
 }

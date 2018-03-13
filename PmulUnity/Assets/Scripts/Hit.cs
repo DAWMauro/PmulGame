@@ -9,6 +9,7 @@ public class Hit : MonoBehaviour
     private string compañero;
     private string enemigo;
 
+    private Interface gameInterface;
     private Animator animator;
 
     private Vector3 direction;
@@ -34,6 +35,7 @@ public class Hit : MonoBehaviour
 
     void Start()
     {
+        gameInterface = GameObject.Find("GameManager").GetComponent<Interface>();
         //
         if (aliado)
         {
@@ -99,9 +101,9 @@ public class Hit : MonoBehaviour
 
     public void IsDead()
     {
-        animator.SetBool("InCombat", false);
-        animator.Play("Die");
         dead = true;
+        animator.SetBool("InCombat", false);
+        animator.Play("Die");       
         GetComponent<Renderer>().sortingOrder = 0;
         Destroy(GetComponent<Collider2D>());
         Destroy(GetComponent<Rigidbody2D>());
@@ -114,6 +116,7 @@ public class Hit : MonoBehaviour
             if (!dead)
             {
                 movement = true;
+                combat = false;
                 if (estadisticasPropia.Speed >= 1)
                 {
                     animator.Play("Run");
@@ -146,6 +149,8 @@ public class Hit : MonoBehaviour
         if (estadisticasRival.GetAttack(estadisticasPropia.Attack()))
         {
             enemy.IsDead();
+            if (aliado)
+                gameInterface.Gold += estadisticasRival.Reward;
         }
     }
 
