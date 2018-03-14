@@ -122,7 +122,7 @@ MonoBehaviour:
   health: 20
   speed: -0.5
   cost: 0
-  reward: 15
+  reward: 20
 --- !u!114 &114977986589666302
 MonoBehaviour:
   m_ObjectHideFlags: 1

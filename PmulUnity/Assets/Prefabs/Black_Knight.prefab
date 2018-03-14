@@ -130,10 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64309e0763d1b540b831238d6b333c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 25
   health: 40
   speed: 0.7
   cost: 30
+  reward: 0
 --- !u!212 &212347296518177392
 SpriteRenderer:
   m_ObjectHideFlags: 1
