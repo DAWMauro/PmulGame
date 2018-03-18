@@ -18,11 +18,18 @@ public class AllySpawn : MonoBehaviour
     private int cost;
     private Button button;
 
+    public Text statsText;
+
     private void Start()
     {
         goldSystem = GameObject.Find("GameManager").GetComponent<Interface>();
         cost = testAllyPrefab.GetComponent<Stats>().Cost;
         originalCD = coldDown;
+
+        statsText.text = "Daño: " + testAllyPrefab.GetComponent<Stats>().Damage.ToString() +
+            "\nVida: " + testAllyPrefab.GetComponent<Stats>().Health.ToString() +
+            "\nVelocidad: " + testAllyPrefab.GetComponent<Stats>().Speed.ToString() +
+            "\nCoste: " + testAllyPrefab.GetComponent<Stats>().Cost.ToString();
     }
     public void Generate(Button bt)
     {
@@ -37,7 +44,7 @@ public class AllySpawn : MonoBehaviour
     private void Update()
     {
         if (button != null)
-        {         
+        {
             if (!button.interactable)
             {
                 coldDown -= Time.deltaTime;
