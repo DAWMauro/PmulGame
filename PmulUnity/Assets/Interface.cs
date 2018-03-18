@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Interface : MonoBehaviour {
+public class Interface : MonoBehaviour
+{
     [SerializeField]
     private Text goldText;
     private int gold;
@@ -21,8 +22,10 @@ public class Interface : MonoBehaviour {
 
         set
         {
+
             gold = value;
-            goldText.text = "Oro: " + gold;
+            if (goldText != null)
+                goldText.text = "Oro: " + gold;
         }
     }
 
@@ -36,12 +39,14 @@ public class Interface : MonoBehaviour {
         set
         {
             wave = value;
-            waveText.text = "Oleada: " + wave;
+            if (waveText != null)
+                waveText.text = "Oleada: " + wave;
         }
     }
 
-    void Start () {
+    void Start()
+    {
         Gold = 100;
-	}
-	
+    }
+
 }

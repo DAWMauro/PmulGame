@@ -135,6 +135,7 @@ MonoBehaviour:
   speed: 0.5
   cost: 50
   reward: 0
+  barra: {fileID: 21300000, guid: 9c6208f21f2b92a40a5ebca90c5a5715, type: 3}
 --- !u!212 &212903685878698508
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Hit : MonoBehaviour
-{    
+{
     [SerializeField]
     private bool aliado;
     private string compañero;
@@ -17,7 +17,7 @@ public class Hit : MonoBehaviour
     private Stats estadisticasPropia;
     private Stats estadisticasRival;
 
-    
+
     private Hit enemy;
 
     //¿Está en movimiento?
@@ -41,7 +41,8 @@ public class Hit : MonoBehaviour
         {
             compañero = "Ally";
             enemigo = "Enemy";
-        } else
+        }
+        else
         {
             compañero = "Enemy";
             enemigo = "Ally";
@@ -71,30 +72,47 @@ public class Hit : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals(enemigo))
+        GameObject collisionObject = collision.gameObject;
+
+        if (collisionObject.tag.Equals(enemigo))
         {
             if (!combat)
             {
                 movement = false;
                 combat = true;
                 animator.Play("Attack");
-                estadisticasRival = collision.gameObject.GetComponent<Stats>();
-                enemy = collision.gameObject.GetComponent<Hit>();
+                estadisticasRival = collisionObject.GetComponent<Stats>();
+                enemy = collisionObject.GetComponent<Hit>();
             }
         }
-        else if (collision.gameObject.tag.Equals(compañero))
+        else if (collisionObject.tag.Equals(compañero))
         {
             if (!combat)
             {
-                movement = false;
-                animator.Play("Idle");
+                if (aliado) {
+                    if (collision.transform.position.x > transform.position.x)
+                    {                        
+                        movement = false;
+                        animator.Play("Idle");
+                    }
+                }
+                else
+                {
+                    if (collision.transform.position.x < transform.position.x)
+                    {
+                        movement = false;
+                        animator.Play("Idle");
+                    }
+                }
+                
             }
-        } else if (collision.gameObject.tag.Equals("Tower") && attackTower)
+        }
+        else if (collision.gameObject.tag.Equals("Tower") && attackTower)
         {
             movement = false;
             combat = true;
             animator.Play("Attack");
-            estadisticasRival = collision.gameObject.GetComponent<Stats>();
+            estadisticasRival = collisionObject.GetComponent<Stats>();
             //enemy = collision.gameObject.GetComponent<Hit>();
         }
     }
@@ -103,7 +121,7 @@ public class Hit : MonoBehaviour
     {
         dead = true;
         animator.SetBool("InCombat", false);
-        animator.Play("Die");       
+        animator.Play("Die");
         GetComponent<Renderer>().sortingOrder = 0;
         Destroy(GetComponent<Collider2D>());
         Destroy(GetComponent<Rigidbody2D>());

@@ -130,11 +130,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64309e0763d1b540b831238d6b333c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
-  health: 40
+  damage: 40
+  health: 100
   speed: 0.7
   cost: 30
   reward: 0
+  barra: {fileID: 21300000, guid: 9c6208f21f2b92a40a5ebca90c5a5715, type: 3}
 --- !u!212 &212347296518177392
 SpriteRenderer:
   m_ObjectHideFlags: 1

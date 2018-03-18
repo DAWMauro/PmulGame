@@ -17,6 +17,7 @@ public class AllySpawn : MonoBehaviour
     private Interface goldSystem;
     private int cost;
     private Button button;
+
     private void Start()
     {
         goldSystem = GameObject.Find("GameManager").GetComponent<Interface>();
