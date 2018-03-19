@@ -13,6 +13,8 @@ public class Interface : MonoBehaviour
     private Text waveText;
     private int wave;
 
+    public int waveLenght;
+
     public int Gold
     {
         get
@@ -40,7 +42,7 @@ public class Interface : MonoBehaviour
         {
             wave = value;
             if (waveText != null)
-                waveText.text = "Oleada: " + wave;
+                waveText.text = "Oleada: " + wave + "/"+ waveLenght;
         }
     }
 

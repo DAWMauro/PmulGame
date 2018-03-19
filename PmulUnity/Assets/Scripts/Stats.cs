@@ -25,10 +25,18 @@ public class Stats : MonoBehaviour
 
     private float maxHealth;
 
+    [SerializeField]
+    AudioClip deathAudio;
+
+    private AudioSource audio;
+   
+
     void Start()
     {
         maxHealth = health;
+        audio = GetComponent<AudioSource>();
         canvas = GameObject.Find("Canvas");
+
 
         //Creacion Imagen
         image = new GameObject();
@@ -70,6 +78,7 @@ public class Stats : MonoBehaviour
 
         if (health <= 0)
         {
+            audio.PlayOneShot(deathAudio);
             return true;
         }
         else

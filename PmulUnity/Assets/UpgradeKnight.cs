@@ -10,20 +10,59 @@ public class UpgradeKnight : MonoBehaviour
 
     private Stats stats;
     public Text statsText;
+    private Interface goldSystem;
+    public StatsToUpgrade upgradeStat;
+    public int costeMejora;
+
+    [SerializeField]
+    private float mejora;
+
+    public Text textUpradeStat;
+
 
     void Start()
     {
         stats = testAllyPrefab.GetComponent<Stats>();
+        goldSystem = GameObject.Find("GameManager").GetComponent<Interface>();
+        textUpradeStat.text = upgradeStat.ToString() + "+" + mejora + "\n Coste: " + costeMejora;
     }
 
     public void Upgrade()
     {
-        stats.Damage += 10;
-        stats.Health += 10;
+        switch (upgradeStat.ToString())
+        {
+            case "Daño":
+                if (costeMejora <= goldSystem.Gold)
+                {
+                    goldSystem.Gold -= costeMejora;
+                    stats.Damage += (int)mejora;
+                }
+                break;
+            case "Vida":
+                if (costeMejora <= goldSystem.Gold)
+                {
+                    goldSystem.Gold -= costeMejora;
+                    stats.Health += (int)mejora;
 
-        statsText.text = "Daño: " + testAllyPrefab.GetComponent<Stats>().Damage.ToString() +
-            "\nVida: " + testAllyPrefab.GetComponent<Stats>().Health.ToString() +
-            "\nVelocidad: " + testAllyPrefab.GetComponent<Stats>().Speed.ToString() +
-            "\nCoste: " + testAllyPrefab.GetComponent<Stats>().Cost.ToString();
+                }
+                break;
+            case "Velocidad":
+                if (costeMejora <= goldSystem.Gold)
+                {
+                    goldSystem.Gold -= costeMejora;
+                    stats.Speed += mejora;
+                }
+                break;
+        }
+
+        statsText.text = "Daño: " + stats.Damage.ToString() +
+            "\nVida: " + stats.Health.ToString() +
+            "\nVelocidad: " + stats.Speed.ToString() +
+            "\nCoste: " + stats.Cost.ToString();
+    }
+
+    public enum StatsToUpgrade
+    {
+        Daño, Vida, Velocidad
     }
 }

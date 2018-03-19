@@ -11,13 +11,16 @@ public class Waves : MonoBehaviour
     [SerializeField]
     private float timeWaves;
 
-
+    private Interface wavesInterface;
     private int actualWave;
     private int actualMob;
     private float[] timeSpawns;
     private float timeWavesSave;
     void Start()
     {
+        wavesInterface = GameObject.Find("GameManager").GetComponent<Interface>();
+        wavesInterface.waveLenght = waves.Length;
+        wavesInterface.Wave = 1;
         actualWave = 0;
         actualMob = 0;
         int i = 0;
@@ -49,6 +52,7 @@ public class Waves : MonoBehaviour
                 timeWaves -= Time.deltaTime;
                 if (timeWaves < 0)
                 {
+                    wavesInterface.Wave++;
                     timeWaves = timeWavesSave;
                     actualMob = 0;
                     actualWave++;

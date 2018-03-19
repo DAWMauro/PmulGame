@@ -23,18 +23,19 @@ public class AllySpawn : MonoBehaviour
     private void Start()
     {
         goldSystem = GameObject.Find("GameManager").GetComponent<Interface>();
-        cost = testAllyPrefab.GetComponent<Stats>().Cost;
+        Stats stats = testAllyPrefab.GetComponent<Stats>();
+        cost = stats.Cost;
         originalCD = coldDown;
 
-        statsText.text = "Daño: " + testAllyPrefab.GetComponent<Stats>().Damage.ToString() +
-            "\nVida: " + testAllyPrefab.GetComponent<Stats>().Health.ToString() +
-            "\nVelocidad: " + testAllyPrefab.GetComponent<Stats>().Speed.ToString() +
-            "\nCoste: " + testAllyPrefab.GetComponent<Stats>().Cost.ToString();
+        statsText.text = "Daño: " + stats.Damage.ToString() +
+            "\nVida: " + stats.Health.ToString() +
+            "\nVelocidad: " + stats.Speed.ToString() +
+            "\nCoste: " + cost.ToString();
     }
     public void Generate(Button bt)
     {
         button = bt;
-        if (cost < goldSystem.Gold)
+        if (cost <= goldSystem.Gold)
         {
             goldSystem.Gold -= cost;
             Instantiate(testAllyPrefab).transform.position = spawnPoint.transform.position;
