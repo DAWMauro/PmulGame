@@ -29,6 +29,8 @@ public class Stats : MonoBehaviour
 
     private AudioSource audio;
 
+    [SerializeField]
+    private bool tower;
 
     public bool last = false;
 
@@ -80,9 +82,21 @@ public class Stats : MonoBehaviour
         if (health <= 0)
         {
             audio.PlayOneShot(deathAudio);
+
+            if (tower)
+            {
+                GameObject panel = GameObject.Find("Canvas");
+                GameObject losePanel = panel.transform.Find("LosePanel").gameObject;
+
+                losePanel.SetActive(true);
+            }
+
             if (last)
             {
-                //aqui el panel
+                GameObject panel = GameObject.Find("Canvas");
+                GameObject winPanel = panel.transform.Find("WinPanel").gameObject;
+
+                winPanel.SetActive(true);
             }
             return true;
         }

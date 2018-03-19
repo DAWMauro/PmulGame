@@ -211,13 +211,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64309e0763d1b540b831238d6b333c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 50
   health: 100
   speed: -0.5
   cost: 0
   reward: 20
   barra: {fileID: 21300000, guid: 9c6208f21f2b92a40a5ebca90c5a5715, type: 3}
   deathAudio: {fileID: 8300000, guid: d0b80539c4aaefb40b3edd87e8b923a5, type: 3}
+  tower: 0
+  last: 1
 --- !u!212 &212903096155272564
 SpriteRenderer:
   m_ObjectHideFlags: 1
