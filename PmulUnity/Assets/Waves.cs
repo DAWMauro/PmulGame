@@ -35,16 +35,33 @@ public class Waves : MonoBehaviour
 
 
     void Update()
-    {      
+    {
         if (actualWave < waves.Length)
-        {           
+        {
             if (actualMob < waves[actualWave].enemys.Length)
             {
                 waves[actualWave].timeSpawn -= Time.deltaTime;
+
                 if (waves[actualWave].timeSpawn < 0)
                 {
-                    Instantiate(waves[actualWave].enemys[actualMob++]).transform.position = transform.position;
-                    waves[actualWave].timeSpawn = timeSpawns[actualWave];
+                    if (actualWave == waves.Length-1)
+                    {
+                        if (actualMob == waves[actualWave].enemys.Length-1)
+                        {                           
+                            GameObject go = waves[actualWave].enemys[actualMob++];
+                            go.GetComponent<Stats>().last = true;
+                            Instantiate(go).transform.position = transform.position;
+                            waves[actualWave].timeSpawn = timeSpawns[actualWave];
+                        }
+
+                    }
+                    else
+                    {
+                        Instantiate(waves[actualWave].enemys[actualMob++]).transform.position = transform.position;
+                        waves[actualWave].timeSpawn = timeSpawns[actualWave];
+                    }
+                   
+
                 }
             }
             else
@@ -69,3 +86,4 @@ public class Waves : MonoBehaviour
         public float timeSpawn;
     }
 }
+

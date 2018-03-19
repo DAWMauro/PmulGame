@@ -16,7 +16,6 @@ public class Stats : MonoBehaviour
     [SerializeField]
     private int reward = 0;
 
-
     GameObject canvas;
     [SerializeField]
     Sprite barra;
@@ -29,7 +28,9 @@ public class Stats : MonoBehaviour
     AudioClip deathAudio;
 
     private AudioSource audio;
-   
+
+
+    public bool last = false;
 
     void Start()
     {
@@ -79,6 +80,10 @@ public class Stats : MonoBehaviour
         if (health <= 0)
         {
             audio.PlayOneShot(deathAudio);
+            if (last)
+            {
+                //aqui el panel
+            }
             return true;
         }
         else
