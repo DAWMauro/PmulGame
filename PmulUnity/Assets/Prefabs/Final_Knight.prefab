@@ -102,7 +102,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -199,10 +199,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64309e0763d1b540b831238d6b333c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  health: 50
-  speed: 1
-  cost: 70
+  damage: 125
+  health: 125
+  speed: 0.6
+  cost: 80
   reward: 0
   barra: {fileID: 21300000, guid: 9c6208f21f2b92a40a5ebca90c5a5715, type: 3}
   deathAudio: {fileID: 8300000, guid: 0705d2a3a1c3378479fb6acb35231934, type: 3}

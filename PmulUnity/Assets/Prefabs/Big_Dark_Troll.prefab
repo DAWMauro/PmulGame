@@ -102,7 +102,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
   health: 500
   speed: -0.5
   cost: 0
-  reward: 20
+  reward: 50
   barra: {fileID: 21300000, guid: 9c6208f21f2b92a40a5ebca90c5a5715, type: 3}
   deathAudio: {fileID: 8300000, guid: 0eaed5382ae132c4d90ab7312478b7a6, type: 3}
   attackAudio: {fileID: 8300000, guid: 59ee1d62787489d43a5110ebe0c7a020, type: 3}

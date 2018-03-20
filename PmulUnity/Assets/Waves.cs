@@ -53,11 +53,20 @@ public class Waves : MonoBehaviour
                             Instantiate(go).transform.position = transform.position;
                             waves[actualWave].timeSpawn = timeSpawns[actualWave];
                         }
+                        else
+                        {
+                            GameObject go = waves[actualWave].enemys[actualMob++];
+                            go.GetComponent<Stats>().last = false;
+                            Instantiate(go).transform.position = transform.position;
+                            waves[actualWave].timeSpawn = timeSpawns[actualWave];
+                        }
 
                     }
                     else
                     {
-                        Instantiate(waves[actualWave].enemys[actualMob++]).transform.position = transform.position;
+                        GameObject go = waves[actualWave].enemys[actualMob++];
+                        go.GetComponent<Stats>().last = false;
+                        Instantiate(go).transform.position = transform.position;
                         waves[actualWave].timeSpawn = timeSpawns[actualWave];
                     }
                    

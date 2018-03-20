@@ -102,7 +102,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64309e0763d1b540b831238d6b333c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  health: 50
+  damage: 30
+  health: 150
   speed: -0.5
   cost: 0
   reward: 20

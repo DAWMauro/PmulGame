@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  health: 1
+  health: 1000
   speed: 0
   cost: 0
   reward: 0
@@ -1185,7 +1185,7 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 1865954394}
   upgradeStat: 1
-  costeMejora: 40
+  costeMejora: 20
   mejora: 5
   textUpradeStat: {fileID: 1385267261}
 --- !u!114 &498648577
@@ -1425,9 +1425,9 @@ MonoBehaviour:
   testAllyPrefab: {fileID: 1672982391187248, guid: 12d3931c329b8d54f9ff32c837d98068,
     type: 2}
   statsText: {fileID: 997803150}
-  upgradeStat: 0
-  costeMejora: 50
-  mejora: 0.2
+  upgradeStat: 2
+  costeMejora: 10
+  mejora: 0.1
   textUpradeStat: {fileID: 1889779381}
 --- !u!114 &516894537
 MonoBehaviour:
@@ -1709,7 +1709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2205882, g: 0.64523333, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2944,7 +2944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2205882, g: 0.64523333, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3369,7 +3369,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -3513,7 +3512,7 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 1865954394}
   upgradeStat: 2
-  costeMejora: 30
+  costeMejora: 20
   mejora: 0.1
   textUpradeStat: {fileID: 355158448}
 --- !u!114 &1678195373
@@ -3654,7 +3653,7 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 1865954394}
   upgradeStat: 0
-  costeMejora: 50
+  costeMejora: 20
   mejora: 10
   textUpradeStat: {fileID: 280562054}
 --- !u!114 &1716345340
@@ -3908,9 +3907,9 @@ MonoBehaviour:
   testAllyPrefab: {fileID: 1416298833217860, guid: 84e3bb3dc491fe241b2f823d5d582048,
     type: 2}
   statsText: {fileID: 23985661}
-  upgradeStat: 0
-  costeMejora: 3
-  mejora: 40
+  upgradeStat: 1
+  costeMejora: 10
+  mejora: 10
   textUpradeStat: {fileID: 1150034939}
 --- !u!114 &1741191928
 MonoBehaviour:
@@ -4026,8 +4025,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemys:
+    - {fileID: 1724811373724318, guid: 476df673c3383e84fbff895239ffcf1e, type: 2}
+    - {fileID: 1724811373724318, guid: 476df673c3383e84fbff895239ffcf1e, type: 2}
     - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
     timeSpawn: 2
+  - enemys:
+    - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    - {fileID: 1466094338657962, guid: 5b69303dc896ecc4897484e5b4366b3b, type: 2}
+    - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    - {fileID: 1466094338657962, guid: 5b69303dc896ecc4897484e5b4366b3b, type: 2}
+    timeSpawn: 2
+  - enemys:
+    - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    - {fileID: 1466094338657962, guid: 5b69303dc896ecc4897484e5b4366b3b, type: 2}
+    - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    timeSpawn: 2
+  - enemys:
+    - {fileID: 1724811373724318, guid: 476df673c3383e84fbff895239ffcf1e, type: 2}
+    - {fileID: 1466094338657962, guid: 5b69303dc896ecc4897484e5b4366b3b, type: 2}
+    - {fileID: 1724811373724318, guid: 476df673c3383e84fbff895239ffcf1e, type: 2}
+    timeSpawn: 2
+  - enemys:
+    - {fileID: 1724811373724318, guid: 0a72b0e52c761dd4e9df6aaf2469e2ae, type: 2}
+    - {fileID: 1466094338657962, guid: edb2679d496efa742999bcfc2db2fd12, type: 2}
+    timeSpawn: 3
   timeWaves: 5
 --- !u!4 &1750288671
 Transform:
@@ -4070,7 +4091,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0378313, y: 0.36552095}
+  m_Offset: {x: -0.47120237, y: 0.36552095}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4081,7 +4102,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.336843, y: 0.80323124}
+  m_Size: {x: 21.4701, y: 0.80323124}
   m_EdgeRadius: 0
 --- !u!4 &1801829867
 Transform:
@@ -4149,7 +4170,7 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 997803150}
   upgradeStat: 0
-  costeMejora: 50
+  costeMejora: 20
   mejora: 20
   textUpradeStat: {fileID: 810403227}
 --- !u!114 &1803645278
@@ -4290,8 +4311,8 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 23985661}
   upgradeStat: 0
-  costeMejora: 5
-  mejora: 40
+  costeMejora: 20
+  mejora: 10
   textUpradeStat: {fileID: 1077374603}
 --- !u!114 &1854083117
 MonoBehaviour:
@@ -4504,9 +4525,9 @@ MonoBehaviour:
   testAllyPrefab: {fileID: 1416298833217860, guid: 84e3bb3dc491fe241b2f823d5d582048,
     type: 2}
   statsText: {fileID: 23985661}
-  upgradeStat: 0
-  costeMejora: 30
-  mejora: 50
+  upgradeStat: 2
+  costeMejora: 10
+  mejora: 0.1
   textUpradeStat: {fileID: 806514349}
 --- !u!114 &1880943630
 MonoBehaviour:
@@ -4753,9 +4774,9 @@ MonoBehaviour:
   testAllyPrefab: {fileID: 1672982391187248, guid: 12d3931c329b8d54f9ff32c837d98068,
     type: 2}
   statsText: {fileID: 997803150}
-  upgradeStat: 0
-  costeMejora: 50
-  mejora: 40
+  upgradeStat: 1
+  costeMejora: 20
+  mejora: 10
   textUpradeStat: {fileID: 524459719}
 --- !u!114 &1920597435
 MonoBehaviour:

@@ -240,7 +240,7 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 1034837091}
   upgradeStat: 0
-  costeMejora: 50
+  costeMejora: 20
   mejora: 10
   textUpradeStat: {fileID: 760078608}
 --- !u!114 &23672198
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2205882, g: 0.64523333, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -528,9 +528,9 @@ MonoBehaviour:
   testAllyPrefab: {fileID: 1672982391187248, guid: 12d3931c329b8d54f9ff32c837d98068,
     type: 2}
   statsText: {fileID: 894935013}
-  upgradeStat: 0
-  costeMejora: 50
-  mejora: 40
+  upgradeStat: 1
+  costeMejora: 10
+  mejora: 10
   textUpradeStat: {fileID: 245797721}
 --- !u!114 &186699393
 MonoBehaviour:
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2205882, g: 0.64523333, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1438,7 +1438,7 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 894935013}
   upgradeStat: 0
-  costeMejora: 50
+  costeMejora: 20
   mejora: 20
   textUpradeStat: {fileID: 27303363}
 --- !u!114 &621408135
@@ -2005,8 +2005,8 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 1821106619}
   upgradeStat: 0
-  costeMejora: 5
-  mejora: 40
+  costeMejora: 20
+  mejora: 10
   textUpradeStat: {fileID: 539391931}
 --- !u!114 &882175488
 MonoBehaviour:
@@ -2230,7 +2230,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -2640,6 +2639,34 @@ MonoBehaviour:
   waves:
   - enemys:
     - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    - {fileID: 1724811373724318, guid: 476df673c3383e84fbff895239ffcf1e, type: 2}
+    - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    timeSpawn: 2
+  - enemys:
+    - {fileID: 1724811373724318, guid: 476df673c3383e84fbff895239ffcf1e, type: 2}
+    - {fileID: 1466094338657962, guid: 5b69303dc896ecc4897484e5b4366b3b, type: 2}
+    - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    timeSpawn: 2
+  - enemys:
+    - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    - {fileID: 1466094338657962, guid: 5b69303dc896ecc4897484e5b4366b3b, type: 2}
+    timeSpawn: 2
+  - enemys:
+    - {fileID: 1466094338657962, guid: edb2679d496efa742999bcfc2db2fd12, type: 2}
+    timeSpawn: 5
+  - enemys:
+    - {fileID: 1724811373724318, guid: 476df673c3383e84fbff895239ffcf1e, type: 2}
+    - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    - {fileID: 1724811373724318, guid: 476df673c3383e84fbff895239ffcf1e, type: 2}
+    - {fileID: 1466094338657962, guid: 5b69303dc896ecc4897484e5b4366b3b, type: 2}
+    timeSpawn: 2
+  - enemys:
+    - {fileID: 1466094338657962, guid: 5b69303dc896ecc4897484e5b4366b3b, type: 2}
+    - {fileID: 1724811373724318, guid: 476df673c3383e84fbff895239ffcf1e, type: 2}
+    - {fileID: 1192432643763442, guid: 4c36e9721ec1d774986491f33933021a, type: 2}
+    timeSpawn: 2
+  - enemys:
+    - {fileID: 1192432643763442, guid: 8cdbec4e4bffa1449abd2e96270cd64e, type: 2}
     timeSpawn: 2
   timeWaves: 5
 --- !u!4 &1040012247
@@ -2781,9 +2808,9 @@ MonoBehaviour:
   testAllyPrefab: {fileID: 1416298833217860, guid: 84e3bb3dc491fe241b2f823d5d582048,
     type: 2}
   statsText: {fileID: 1821106619}
-  upgradeStat: 0
-  costeMejora: 30
-  mejora: 50
+  upgradeStat: 2
+  costeMejora: 10
+  mejora: 0.1
   textUpradeStat: {fileID: 965033852}
 --- !u!114 &1206589325
 MonoBehaviour:
@@ -2923,7 +2950,7 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 1034837091}
   upgradeStat: 2
-  costeMejora: 30
+  costeMejora: 10
   mejora: 0.1
   textUpradeStat: {fileID: 1794604488}
 --- !u!114 &1425423262
@@ -3238,9 +3265,9 @@ MonoBehaviour:
   testAllyPrefab: {fileID: 1416298833217860, guid: 84e3bb3dc491fe241b2f823d5d582048,
     type: 2}
   statsText: {fileID: 1821106619}
-  upgradeStat: 0
-  costeMejora: 3
-  mejora: 40
+  upgradeStat: 1
+  costeMejora: 10
+  mejora: 10
   textUpradeStat: {fileID: 19591365}
 --- !u!114 &1467637557
 MonoBehaviour:
@@ -3519,9 +3546,9 @@ MonoBehaviour:
   testAllyPrefab: {fileID: 1672982391187248, guid: 12d3931c329b8d54f9ff32c837d98068,
     type: 2}
   statsText: {fileID: 894935013}
-  upgradeStat: 0
-  costeMejora: 50
-  mejora: 0.2
+  upgradeStat: 2
+  costeMejora: 10
+  mejora: 0.1
   textUpradeStat: {fileID: 1200936010}
 --- !u!114 &1482476666
 MonoBehaviour:
@@ -3729,7 +3756,7 @@ MonoBehaviour:
     type: 2}
   statsText: {fileID: 1034837091}
   upgradeStat: 1
-  costeMejora: 40
+  costeMejora: 10
   mejora: 5
   textUpradeStat: {fileID: 1852843643}
 --- !u!114 &1672369914
@@ -4082,6 +4109,7 @@ MonoBehaviour:
   reward: 0
   barra: {fileID: 21300000, guid: 9c6208f21f2b92a40a5ebca90c5a5715, type: 3}
   deathAudio: {fileID: 0}
+  attackAudio: {fileID: 0}
   tower: 1
   last: 0
 --- !u!114 &1763296758

@@ -96,9 +96,9 @@ public class Stats : MonoBehaviour
 
             if (last)
             {
+                last = false;
                 GameObject panel = GameObject.Find("Canvas");
                 GameObject winPanel = panel.transform.Find("WinPanel").gameObject;
-
                 winPanel.SetActive(true);
             }
             return true;

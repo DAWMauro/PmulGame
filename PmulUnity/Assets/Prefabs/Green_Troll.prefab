@@ -102,7 +102,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64309e0763d1b540b831238d6b333c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  health: 100
+  damage: 15
+  health: 250
   speed: -0.5
   cost: 0
   reward: 20
@@ -220,7 +220,7 @@ MonoBehaviour:
   deathAudio: {fileID: 8300000, guid: d0b80539c4aaefb40b3edd87e8b923a5, type: 3}
   attackAudio: {fileID: 8300000, guid: 59ee1d62787489d43a5110ebe0c7a020, type: 3}
   tower: 0
-  last: 1
+  last: 0
 --- !u!212 &212903096155272564
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -254,7 +254,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1152634155
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 850901d5c221b5744997fe4f5728f0e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
