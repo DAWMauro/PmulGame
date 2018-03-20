@@ -27,6 +27,9 @@ public class Stats : MonoBehaviour
     [SerializeField]
     AudioClip deathAudio;
 
+    [SerializeField]
+    AudioClip attackAudio;
+
     private AudioSource audio;
 
     [SerializeField]
@@ -108,6 +111,7 @@ public class Stats : MonoBehaviour
 
     public int Attack()
     {
+        audio.PlayOneShot(attackAudio);
         return damage;
     }
 
