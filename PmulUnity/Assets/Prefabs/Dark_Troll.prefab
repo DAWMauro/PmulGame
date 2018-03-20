@@ -158,7 +158,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -218,6 +218,9 @@ MonoBehaviour:
   reward: 20
   barra: {fileID: 21300000, guid: 9c6208f21f2b92a40a5ebca90c5a5715, type: 3}
   deathAudio: {fileID: 8300000, guid: 0eaed5382ae132c4d90ab7312478b7a6, type: 3}
+  attackAudio: {fileID: 8300000, guid: 59ee1d62787489d43a5110ebe0c7a020, type: 3}
+  tower: 0
+  last: 0
 --- !u!212 &212809671573583986
 SpriteRenderer:
   m_ObjectHideFlags: 1
